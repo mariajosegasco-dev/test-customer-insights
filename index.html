@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Prueba Customer Insights v3</title>
- 
-    <!-- Script Customer Insights -->
+<title>Prueba Customer Insights v4</title>
+
+<!-- FIX: convertir HASH → QUERY PARAM -->
+  <script>
+  (function () {
+    if (window.location.hash && window.location.hash.includes("msdynmkt_trackingcontext")) {
+      const hash = window.location.hash.substring(1);
+      const newUrl = window.location.pathname + "?" + hash;
+      window.location.replace(newUrl);
+    }
+  })();
+  </script>
+
+<!-- Script Customer Insights -->
 <script>
         (function () {
             var hash = window.location.hash;
